@@ -6,11 +6,9 @@ function App() {
 
   return (
     <>
-      <section id="center">
-        <h1>Hello, world!</h1>
-      </section>
+      <p>Hello world!</p>
     </>
-  )
+  );
 }
 
 export default App
