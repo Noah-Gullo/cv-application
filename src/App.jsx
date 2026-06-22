@@ -1,31 +1,8 @@
 import { useState } from 'react'
+import GeneralInfo from './components/GeneralInfo';
+import Education from './components/Education';
+import Experience from './components/Experience';
 import './App.css'
-
-function GeneralInfo(){
-  return (
-    <>
-      <form>
-        <input></input>
-      </form>
-    </>
-  );
-}
-
-function Education(){
-  return (
-    <>
-      <p>HELLO WORLD</p>
-    </>
-  );
-}
-
-function Experience(){
-  return (
-    <>
-      <h2>Experience</h2>
-    </>
-  );
-}
 
 function App() {
   const [count, setCount] = useState(0)
