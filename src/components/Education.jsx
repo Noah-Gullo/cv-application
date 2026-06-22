@@ -2,7 +2,7 @@ import TextField from "./TextField";
 function Education(){
   return (
     <section>
-      <h1>HELLO WORLD</h1>
+      <h1>Education</h1>
     </section>
   );
 }
