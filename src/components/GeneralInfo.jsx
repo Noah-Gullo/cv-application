@@ -1,8 +1,8 @@
-import TextField from "./TextField";
+import TextField from "./TextField.jsx";
 
 function GeneralInfo(){
   return (
-    <section>
+    <section id="GeneralInfo">
       <h1>General Information</h1>
       <form>
         <TextField text="Name"/>
