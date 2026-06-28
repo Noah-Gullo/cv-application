@@ -1,6 +1,6 @@
 function TextField({text = "Enter here"}){
   return (
-    <input placeholder={text}></input>
+    <input placeholder={text} className="textField"></input>
   );
 }
 
