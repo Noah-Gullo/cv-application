@@ -1,5 +1,11 @@
 section{
     display: flex;
     justify-self: center;
+    align-items: center;
     flex-direction: column;
+    gap: 0.2em;
+}
+
+label{
+    margin-right: 0.2em;
 }
