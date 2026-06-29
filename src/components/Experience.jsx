@@ -1,25 +1,37 @@
-import { useState } from "react";
+import { useState, useId } from "react";
 import ExperienceField from "./ExperienceField";
 
 
 function Experience(){
   const [experiences, setExperiences] = useState([{id: crypto.randomUUID()}]);
 
-  function handleClick(){
+  function addExperience(){
     setExperiences([
       ...experiences,
       {id: crypto.randomUUID()}
     ]);
   }
+
+  function removeExperience(targetID){
+    setExperiences(
+      experiences => experiences.filter(experience => experience.id !== targetID)
+    );
+  }
+
   return (
     <section id="Experience">
       <h1>Experience</h1>
       {experiences.map((experience) => (
-        <ExperienceField key={experience.id}></ExperienceField>
+        <div className="experience" id={experience.id}>
+          <ExperienceField key={experience.id}></ExperienceField>
+          <button onClick={() => {
+            removeExperience(experience.id);
+          }}>Remove Experience</button>
+        </div>
       ))}
 
       <button onClick={() => {
-        handleClick();
+        addExperience();
       }}>Add Experience </button>
     </section>
   );
