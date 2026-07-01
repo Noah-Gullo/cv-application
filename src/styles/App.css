@@ -1,5 +1,6 @@
 section, 
-.experience{
+.experience,
+#submitButton{
     display: flex;
     justify-self: center;
     align-items: center;
