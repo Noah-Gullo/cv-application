@@ -22,8 +22,8 @@ function Experience(){
     <section id="Experience">
       <h1>Experience</h1>
       {experiences.map((experience) => (
-        <div className="experience" id={experience.id}>
-          <ExperienceField key={experience.id}></ExperienceField>
+        <div className="experience" id={experience.id} key={experience.id}>
+          <ExperienceField></ExperienceField>
           <button onClick={() => {
             removeExperience(experience.id);
           }}>Remove Experience</button>
