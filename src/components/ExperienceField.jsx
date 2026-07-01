@@ -1,7 +1,7 @@
 import DateField from "./DateField.jsx"
 import TextField from "./TextField.jsx";
 
-function ExperienceField(){
+export default function ExperienceField(){
     return (
         <>
             <TextField text="Company Name"></TextField>
@@ -12,5 +12,3 @@ function ExperienceField(){
         </>
     );
 }
-
-export default ExperienceField;

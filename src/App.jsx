@@ -14,16 +14,19 @@ function App() {
   if(formVisible){
     return (
       <>
-      <h1>test</h1>
+        <GeneralInfo formVisible={true}/>
+        <Education formVisible={true}/>
+        <Experience formVisible={true}/>
+        <button id="editButton">Edit</button>
       </>
     )
   }
 
   return (
     <>
-      <GeneralInfo />
-      <Education />
-      <Experience />
+      <GeneralInfo formVisible={false}/>
+      <Education formVisible={false}/>
+      <Experience formVisible={false}/>
       <button id="submitButton" onClick={submitCV}>Submit</button>
     </>
   );

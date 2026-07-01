@@ -1,4 +1,4 @@
-function DateField({text = "Enter date"}){
+export default function DateField({text = "Enter date"}){
     return (
        <div className="dateField">
         <label htmlFor="date">{text}</label>
@@ -6,5 +6,3 @@ function DateField({text = "Enter date"}){
        </div>
     );
 }
-
-export default DateField;

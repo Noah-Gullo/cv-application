@@ -1,7 +1,5 @@
-function TextField({text = "Enter here"}){
+export default function TextField({text = "Enter here", handleValue}){
   return (
-    <input placeholder={text} className="textField"></input>
+    <input placeholder={text} className="textField" onChange={(e) => handleValue(e.target.value, text)}></input>
   );
 }
-
-export default TextField;

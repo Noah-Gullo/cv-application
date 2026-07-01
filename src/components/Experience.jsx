@@ -1,8 +1,7 @@
 import { useState, useId } from "react";
 import ExperienceField from "./ExperienceField";
 
-
-function Experience(){
+export default function Experience({formVisible = false}){
   const [experiences, setExperiences] = useState([{id: crypto.randomUUID()}]);
 
   function addExperience(){
@@ -15,6 +14,14 @@ function Experience(){
   function removeExperience(targetID){
     setExperiences(
       experiences => experiences.filter(experience => experience.id !== targetID)
+    );
+  }
+
+  if(formVisible){
+    return (
+      <section id="Experience">
+        <p>EXPERIENCE 1</p>
+      </section>
     );
   }
 
@@ -36,5 +43,3 @@ function Experience(){
     </section>
   );
 }
-
-export default Experience;
