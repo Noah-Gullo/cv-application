@@ -2,9 +2,9 @@ import { useState } from "react";
 import TextField from "./TextField.jsx";
 
 const valuesDict = {
-  "Name": "a",
-  "Email": "a@gmail.com",
-  "Phone Number": "111-1111-1111"
+  "Name": "First Last",
+  "Email": "example@gmail.com",
+  "Phone Number": "123-4567-8910"
 };
 
 export default function GeneralInfo({formVisible = false}){
@@ -17,9 +17,9 @@ export default function GeneralInfo({formVisible = false}){
   if(formVisible){
     return (
       <section id="GeneralInfo">
-        <p>{values["Name"]}</p>
-        <p>{values["Email"]}</p>
-        <p>{values["Phone Number"]}</p>
+        <p className="infoField">{values["Name"]}</p>
+        <p className="infoField">{values["Email"]}</p>
+        <p className="infoField">{values["Phone Number"]}</p>
       </section>
     );
   }
