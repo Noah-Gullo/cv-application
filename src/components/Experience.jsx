@@ -31,15 +31,16 @@ export default function Experience({formVisible = false}){
   }
 
   if(formVisible){
+    console.log(experiences);
     return (
       <section id="Experience">
         {experiences.map((experience) => (
           <div className="experience" id={experience.id} key={experience.id}>
-            <p>{experiences[experience.id]["Company Name"]}</p>
-            <p>{experiences[experience.id]["Position Title"]}</p>
-            <p>{experiences[experience.id]["Description"]}</p>
-            <p>{experiences[experience.id]["Start Date"]}</p>
-            <p>{experiences[experience.id]["End Date"]}</p>
+            <p>{experience.values["Company Name"]}</p>
+            <p>{experience.values["Position Title"]}</p>
+            <p>{experience.values["Description"]}</p>
+            <p>{experience.values["Start Date"]}</p>
+            <p>{experience.values["End Date"]}</p>
           </div>
         ))}
       </section>
