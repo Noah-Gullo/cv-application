@@ -6,14 +6,15 @@ const valuesDict = {
   "Company Name": "Example company name",
   "Position Title": "Example position title",
   "Description": "Example description",
-  "Start Date": "mm-dd-yyyy",
-  "End Date": "mm-dd-yyyy"
+  "Start Date": "01-01-1970",
+  "End Date": "01-01-1970"
 }
 
-export default function ExperienceField(id){
+export default function ExperienceField({id, updateExperience}){
     const [values, setValues] = useState(valuesDict);
     function handleValue(value, type){
         valuesDict[type] = value;
+        updateExperience(id, valuesDict);
     }
 
     return (

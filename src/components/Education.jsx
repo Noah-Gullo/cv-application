@@ -3,8 +3,8 @@ import DateField from "./DateField.jsx";
 import TextField from "./TextField.jsx";
 
 const valuesDict = {
-  "School Name": "Example School Name",
-  "Degree Name": "Example Degree Name",
+  "School Name": "School Name",
+  "Degree Name": "Degree Name",
   "Start Date": "01-01-1970",
   "End Date": "01-01-1970",
 }

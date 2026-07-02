@@ -17,7 +17,7 @@ function App() {
         <GeneralInfo formVisible={true}/>
         <Education formVisible={true}/>
         <Experience formVisible={true}/>
-        <button id="editButton">Edit</button>
+        <button id="editButton" onClick={submitCV}>Edit</button>
       </>
     )
   }

@@ -5,12 +5,16 @@ const experienceDict = {
   "Company Name": "Example company name",
   "Position Title": "Example position title",
   "Description": "Example description",
-  "Start Date": "mm-dd-yyyy",
-  "End Date": "mm-dd-yyyy"
+  "Start Date": "01-01-1970",
+  "End Date": "01-01-1970"
 };
 
 export default function Experience({formVisible = false}){
   const [experiences, setExperiences] = useState([{values: experienceDict, id: crypto.randomUUID()}]);
+
+  function updateExperience(id, newValues){
+    experiences[id] = newValues;
+  }
 
   function addExperience(){
     const randomID = crypto.randomUUID();
@@ -31,7 +35,11 @@ export default function Experience({formVisible = false}){
       <section id="Experience">
         {experiences.map((experience) => (
           <div className="experience" id={experience.id} key={experience.id}>
-            <p>{experience.id}</p>
+            <p>{experiences[experience.id]["Company Name"]}</p>
+            <p>{experiences[experience.id]["Position Title"]}</p>
+            <p>{experiences[experience.id]["Description"]}</p>
+            <p>{experiences[experience.id]["Start Date"]}</p>
+            <p>{experiences[experience.id]["End Date"]}</p>
           </div>
         ))}
       </section>
@@ -43,7 +51,7 @@ export default function Experience({formVisible = false}){
       <h1>Experience</h1>
       {experiences.map((experience) => (
         <div className="experience" id={experience.id} key={experience.id}>
-          <ExperienceField id={experience.id}></ExperienceField>
+          <ExperienceField id={experience.id} updateExperience={updateExperience}></ExperienceField>
           <button onClick={() => {
             removeExperience(experience.id);
           }}>Remove Experience</button>
