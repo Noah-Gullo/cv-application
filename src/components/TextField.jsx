@@ -1,5 +1,10 @@
-export default function TextField({text = "Enter here", handleValue}){
+import { useState } from "react";
+export default function TextField({placeholder = "Enter here", text = "", handleValue}){
+   const [value, setValue] = useState("");
   return (
-    <input placeholder={text} className="textField" onChange={(e) => handleValue(e.target.value, text)}></input>
+    <input placeholder={placeholder} value={value} className="textField" onChange={(e) => {
+      setValue(e.target.value);
+      handleValue(e.target.value, placeholder);
+    }}/>
   );
 }

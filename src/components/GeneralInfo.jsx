@@ -2,9 +2,9 @@ import { useState } from "react";
 import TextField from "./TextField.jsx";
 
 const valuesDict = {
-  "Name": "First Last",
-  "Email": "example@gmail.com",
-  "Phone Number": "123-4567-8910"
+  "Name": "Joe Shmoe",
+  "Email": "jshmoe@gmail.com",
+  "Phone Number": "123-1234-4321"
 };
 
 export default function GeneralInfo({formVisible = false}){
@@ -12,6 +12,7 @@ export default function GeneralInfo({formVisible = false}){
 
   function handleValue(value, type){
     valuesDict[type] = value;
+    console.log("HANDLE VALUE: " + valuesDict[type]);
   }
 
   if(formVisible){
@@ -27,9 +28,9 @@ export default function GeneralInfo({formVisible = false}){
   return (
     <section id="GeneralInfo">
       <h1>General Information</h1>
-      <TextField text="Name" handleValue={handleValue}/>
-      <TextField text="Email" handleValue={handleValue}/>
-      <TextField text="Phone Number" handleValue={handleValue}/>
+      <TextField placeholder="Name" text={valuesDict["Name"]} handleValue={handleValue}/>
+      <TextField placeholder="Email" text={valuesDict["Email"]} handleValue={handleValue}/>
+      <TextField placeholder="Phone Number" text={valuesDict["Phone Number"]} handleValue={handleValue}/>
     </section>
   );
 }
