@@ -3,10 +3,10 @@ import DateField from "./DateField.jsx";
 import TextField from "./TextField.jsx";
 
 const valuesDict = {
-  "School Name": "School Name",
-  "Degree Name": "Degree Name",
-  "Start Date": "01-01-1970",
-  "End Date": "01-01-1970",
+  "School Name": "",
+  "Degree Name": "",
+  "Start Date": "",
+  "End Date": "",
 }
 
 export default function Education({formVisible = false}){

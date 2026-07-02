@@ -2,9 +2,9 @@ import { useState } from "react";
 import TextField from "./TextField.jsx";
 
 const valuesDict = {
-  "Name": "Joe Shmoe",
-  "Email": "jshmoe@gmail.com",
-  "Phone Number": "123-1234-4321"
+  "Name": "",
+  "Email": "",
+  "Phone Number": ""
 };
 
 export default function GeneralInfo({formVisible = false}){
@@ -12,7 +12,6 @@ export default function GeneralInfo({formVisible = false}){
 
   function handleValue(value, type){
     valuesDict[type] = value;
-    console.log("HANDLE VALUE: " + valuesDict[type]);
   }
 
   if(formVisible){

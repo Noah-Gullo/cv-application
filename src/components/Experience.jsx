@@ -2,11 +2,11 @@ import { useState, useId } from "react";
 import ExperienceField from "./ExperienceField";
 
 const experienceDict = {
-  "Company Name": "Example company name",
-  "Position Title": "Example position title",
-  "Description": "Example description",
-  "Start Date": "01-01-1970",
-  "End Date": "01-01-1970"
+  "Company Name": "",
+  "Position Title": "",
+  "Description": "",
+  "Start Date": "",
+  "End Date": ""
 };
 
 export default function Experience({formVisible = false}){
@@ -36,7 +36,6 @@ export default function Experience({formVisible = false}){
   }
 
   if(formVisible){
-    console.log(experiences);
     return (
       <section id="Experience">
         {experiences.map((experience) => (

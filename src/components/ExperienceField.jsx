@@ -3,11 +3,11 @@ import DateField from "./DateField.jsx"
 import TextField from "./TextField.jsx";
 
 const valuesDict = {
-  "Company Name": "Example company name",
-  "Position Title": "Example position title",
-  "Description": "Example description",
-  "Start Date": "01-01-1970",
-  "End Date": "01-01-1970"
+  "Company Name": "",
+  "Position Title": "",
+  "Description": "",
+  "Start Date": "",
+  "End Date": ""
 }
 
 export default function ExperienceField({id, updateExperience}){
